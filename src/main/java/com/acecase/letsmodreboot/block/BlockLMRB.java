@@ -1,5 +1,6 @@
 package com.acecase.letsmodreboot.block;
 
+import com.acecase.letsmodreboot.creativetab.CreativeTabLMRB;
 import com.acecase.letsmodreboot.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -13,6 +14,7 @@ public class BlockLMRB extends Block {
     }
     public BlockLMRB(){
         this(Material.rock);
+        this.setCreativeTab(CreativeTabLMRB.LMRB_TAB);
     }
 
     @Override

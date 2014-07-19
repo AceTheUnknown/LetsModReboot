@@ -1,5 +1,6 @@
 package com.acecase.letsmodreboot.item;
 
+import com.acecase.letsmodreboot.creativetab.CreativeTabLMRB;
 import com.acecase.letsmodreboot.reference.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -10,6 +11,7 @@ import net.minecraft.item.ItemStack;
 public class ItemLMRB extends Item {
     public ItemLMRB(){
         super();
+        this.setCreativeTab(CreativeTabLMRB.LMRB_TAB);
 
     }
 
