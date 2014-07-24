@@ -3,6 +3,7 @@ package com.acecase.letsmodreboot;
 import com.acecase.letsmodreboot.handler.ConfigurationHandler;
 import com.acecase.letsmodreboot.init.ModBlocks;
 import com.acecase.letsmodreboot.init.ModItems;
+import com.acecase.letsmodreboot.init.Recipes;
 import com.acecase.letsmodreboot.proxy.IProxy;
 import com.acecase.letsmodreboot.reference.Reference;
 import com.acecase.letsmodreboot.utility.LogHelper;
@@ -27,7 +28,7 @@ public class LetsModReboot
     {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
-        LogHelper.debug("Pre Init Complete!");
+        LogHelper.info("Pre Init Complete!");
 
         ModItems.init();
         ModBlocks.init();
@@ -36,13 +37,14 @@ public class LetsModReboot
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
-        LogHelper.warn("Init Complete!");
+        Recipes.init();
+        LogHelper.info("Init Complete!");
     }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
-        LogHelper.fatal("Post Init Complete!");
+        LogHelper.info("Post Init Complete!");
     }
 
 
